@@ -1,0 +1,67 @@
+@import 'compass/css3';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font: {
+        family: '微軟正黑體';
+    }
+}
+
+html, body {
+    margin: 0;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+#app {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.loading {
+    text-align: center;
+
+    img {
+        width: 48px;
+    }
+}
+
+.result {
+    margin-bottom: 20px;
+
+    .state {
+        padding: 15px;
+        text-align: center;
+        @include border-radius(4px);
+    }
+
+    .success, .error {
+        strong {
+            display: block;
+            margin-bottom: 10px;
+            font: {
+                size: 18px;
+            }
+        }
+        
+        .desc {
+            font: {
+                size: 16px;
+            }
+        }
+    }
+
+    .success {
+        color: #042331;
+        background-color: #78cef5;
+    }
+}
+
+.map {
+    iframe {
+        border: 1px solid #ccc;
+    }
+}
