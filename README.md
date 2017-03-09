@@ -101,5 +101,5 @@ render() {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     
-    <i class="material-icons">explore</i
+    <i class="material-icons">explore</i>
   ```
