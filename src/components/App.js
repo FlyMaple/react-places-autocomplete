@@ -4,16 +4,18 @@ import loading from '../../public/images/ripple.gif'
 
 import PlacesAutoComplete from './PlacesAutoComplete'
 
+const initState = {
+    loading: false,
+    address: '',
+    location: {},
+    state: ''
+}
+
 class App extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            loading: false,
-            address: '',
-            location: {},
-            state: ''
-        }
+        this.state = initState
     }
 
     /**
@@ -31,11 +33,9 @@ class App extends Component {
      * @param { string } address
      */
     handleInputOnChange = (address) => {
-        this.setState({
-            address,
-            state: '',
-            location: {}
-        })
+        this.setState(
+            { ...initState, address }
+        )
     }
     
     /**
@@ -57,7 +57,7 @@ class App extends Component {
         if (err) {
             this.setState({
                 state: 'ZERO_RESULTS',
-                location,
+                location: {},
                 loading: false
             })
         } else {
